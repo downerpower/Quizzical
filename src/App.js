@@ -33,7 +33,6 @@ function App() {
         fetch(`https://the-trivia-api.com/api/questions?${categoryValue && `categories=${categoryValue}&`}limit=5&difficulty=${difficultyValue}`)
           .then(res => res.json())
           .then(data => {
-            console.log(data)
             setQuizData(data.map(quizElement => ({
               id: quizElement.id,
               question: quizElement.question,
